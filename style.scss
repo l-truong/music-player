@@ -1,0 +1,147 @@
+@import "https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap";
+
+/* VARIABLES */
+$main-background-color: #FC5C7D;
+$main-background-second-color: #6A82FB;
+$controls-color: rgb(129, 129, 129);
+$progress-color: #83A9FF;
+$font-family: Spartan, sans-serif;
+$player-container-background-color: #e7e7e7;
+
+/** STYLE **/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: $font-family;
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
+}
+
+html {
+	box-sizing: border-box;
+
+	body {
+		margin: 0;
+		min-height: 100vh;		
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 12px;
+		background: $main-background-color;
+		background: -webkit-linear-gradient(to left, $main-background-second-color, $main-background-color);
+		background: linear-gradient(to left, $main-background-second-color, $main-background-color);
+
+		.player-container {
+			height: 500px;
+			width: 400px;
+			background-color: $player-container-background-color;
+			border-radius: 20px;
+			box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
+
+			/* Album Image */
+			.img-container {
+				height: 300px;
+				width: 300px;
+				position: relative;
+				top: -50px;
+				left: 50px;
+				img {
+					height: 100%;
+					width: 100%;
+					object-fit: cover;
+					border-radius: 20px;
+					box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.2);
+				}
+			}
+			#musiclink {
+				text-decoration: none;
+				color: inherit;				
+				h2 {
+					font-size: 25px;
+					text-align: center;
+					margin: 0;
+				}
+			}
+			h3 {
+				font-size: 20px;
+				text-align: center;
+				font-weight: 400;
+				margin: 5px 0 0;
+			}
+
+			/* Progress */
+			.progress-container {
+				background: #fff;
+				border-radius: 5px;
+				cursor: pointer;
+				margin: 40px 20px;
+				height: 4px;
+				width: 90%;
+
+				.progress {
+					background: $progress-color;
+					border-radius: 5px;
+					height: 100%;
+					width: 0%;
+					transition: width 0.1s linear;
+				}
+				.duration-wrapper {
+					position: relative;
+					top: -25px;
+					display: flex;
+					justify-content: space-between;
+				}
+			}
+
+			/* Controls */
+			.player-controls {
+				position: relative;
+				top: -15px;
+				left: 120px;
+				width: 200px;
+				
+				.fas {
+					font-size: 30px;
+					color: $controls-color;
+					margin-right: 30px;
+					cursor: pointer;
+					user-select: none;
+					&:hover {
+						filter: brightness(80%);
+					}
+				}
+				.main-button {
+					font-size: 40px;
+					position: relative;
+					top: 3px;
+				}
+			}
+		}
+	}
+}
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 376px) {
+	.player-container {
+		width: 95vw;
+
+		.img-container {
+			left: 29px;
+		}
+		#musiclink {
+			h2 {
+				font-size: 20px;
+			}
+		}
+		h3 {
+			font-size: 15px;
+		}
+		.player-controls {
+			top: -10px;
+			left: 100px;
+		}
+	}	
+}
