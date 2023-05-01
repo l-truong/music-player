@@ -1,4 +1,4 @@
 # music-player
 https://laura-truong-portfolio.github.io/music-player/
 
-![03-video-player](https://user-images.githubusercontent.com/11521905/235499131-082ac4c4-a367-4739-9b87-f89754fedd9b.png)
+![02-music-player](https://user-images.githubusercontent.com/11521905/235499313-0a3a328b-5585-43b7-932b-add16c746d5f.png)
